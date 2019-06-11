@@ -1,0 +1,51 @@
+{
+    "title": "Does our service tolerate the loss of its exchange file?",
+    "description": "Our service reads data from an exchange file, can it support that file disappearing?",
+    "tags": [
+        "tutorial",
+        "filesystem"
+    ],
+    "configuration" : {
+        "service_uri" : "localhost:8080",
+        "file_suffix" : ".old",
+        "protocol" : {
+          "type" : "env",
+          "key" : "PROTOCOL"
+        }
+    },
+    "secrets" : {
+        "test_secret" :  { 
+            "file_current" : "./exchange.dat"
+        }
+    },
+    "steady-state-hypothesis": {
+        "title": "The exchange file must exist",
+        "probes": [
+            {
+                "type": "probe",
+                "name": "service-is-unavailable",
+                "tolerance": [200, 503],
+                "provider": {
+                    "type": "http",
+                    "url": "${protocol}://${service_uri}"
+                }
+            }
+        ]
+    },
+    "method": [
+    {
+        "name": "move-exchange-file",
+        "type": "action",
+        "provider": {
+            "type": "python",
+            "module": "os",
+            "func": "rename",
+            "secrets" : ["test_secret"],
+            "arguments": {
+                "src": "${file_current}",
+                "dst": "${file_current}${file_suffix}"
+            }
+        }
+    }
+]
+}

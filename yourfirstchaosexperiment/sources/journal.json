@@ -1,0 +1,163 @@
+{
+  "chaoslib-version": "1.4.0",
+  "platform": "Darwin-18.6.0-x86_64-i386-64bit",
+  "node": "MacBook-Pro-4.local",
+  "experiment": {
+    "title": "Does our service tolerate the loss of its exchange file?",
+    "description": "Our service reads data from an exchange file, can it support that file disappearing?",
+    "tags": [
+      "tutorial",
+      "filesystem"
+    ],
+    "configuration": {
+      "service_uri": "localhost:8080",
+      "file_suffix": ".old",
+      "protocol": {
+        "type": "env",
+        "key": "PROTOCOL"
+      }
+    },
+    "secrets": {
+      "test_secret": {
+        "file_current": "./exchange.dat"
+      }
+    },
+    "steady-state-hypothesis": {
+      "title": "The exchange file must exist",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "service-is-unavailable",
+          "tolerance": [
+            200,
+            503
+          ],
+          "provider": {
+            "type": "http",
+            "url": "${protocol}://${service_uri}"
+          }
+        }
+      ]
+    },
+    "method": [
+      {
+        "name": "move-exchange-file",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "os",
+          "func": "rename",
+          "secrets": [
+            "test_secret"
+          ],
+          "arguments": {
+            "src": "${file_current}",
+            "dst": "${file_current}${file_suffix}"
+          }
+        }
+      }
+    ],
+    "dry": false
+  },
+  "start": "2019-06-11T18:33:24.563215",
+  "status": "completed",
+  "deviated": false,
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "service-is-unavailable",
+            "tolerance": [
+              200,
+              503
+            ],
+            "provider": {
+              "type": "http",
+              "url": "${protocol}://${service_uri}"
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "Date": "Tue, 11 Jun 2019 18:33:24 GMT",
+              "Server": "WSGIServer/0.2 CPython/3.7.3",
+              "Content-type": "text/plain",
+              "Content-Length": "26"
+            },
+            "body": "2019-06-11T11:33:24.346270"
+          },
+          "status": "succeeded",
+          "start": "2019-06-11T18:33:24.564270",
+          "end": "2019-06-11T18:33:24.570260",
+          "duration": 0.00599,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "service-is-unavailable",
+            "tolerance": [
+              200,
+              503
+            ],
+            "provider": {
+              "type": "http",
+              "url": "${protocol}://${service_uri}"
+            }
+          },
+          "output": {
+            "status": 503,
+            "headers": {
+              "Date": "Tue, 11 Jun 2019 18:33:24 GMT",
+              "Server": "WSGIServer/0.2 CPython/3.7.3",
+              "Content-type": "text/plain",
+              "Content-Length": "26"
+            },
+            "body": "Exchange file is not ready"
+          },
+          "status": "succeeded",
+          "start": "2019-06-11T18:33:24.572843",
+          "end": "2019-06-11T18:33:24.577436",
+          "duration": 0.004593,
+          "tolerance_met": true
+        }
+      ]
+    }
+  },
+  "run": [
+    {
+      "activity": {
+        "name": "move-exchange-file",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "os",
+          "func": "rename",
+          "secrets": [
+            "test_secret"
+          ],
+          "arguments": {
+            "src": "${file_current}",
+            "dst": "${file_current}${file_suffix}"
+          }
+        }
+      },
+      "output": null,
+      "status": "succeeded",
+      "start": "2019-06-11T18:33:24.570891",
+      "end": "2019-06-11T18:33:24.572397",
+      "duration": 0.001506
+    }
+  ],
+  "rollbacks": [],
+  "end": "2019-06-11T18:33:24.577958",
+  "duration": 0.030382156372070312
+}

@@ -1,0 +1,429 @@
+[36m[2019-06-11 10:24:06 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:24:06 DEBUG][39m Running command 'validate'
+[36m[2019-06-11 10:24:06 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:24:06 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 10:24:06 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:24:06 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:24:06 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 10:24:06 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:24:06 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:24:06 DEBUG][39m Secrets loaded
+[32m[2019-06-11 10:24:06 INFO][39m Experiment looks valid
+[36m[2019-06-11 10:24:06 DEBUG][39m Clearing activities cache
+[32m[2019-06-11 10:24:06 INFO][39m experiment syntax and semantic look valid
+[36m[2019-06-11 10:24:48 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:24:48 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:24:48 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:25:05 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:25:05 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:25:05 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:25:14 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:25:14 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:25:14 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:25:14 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 10:25:14 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:25:14 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:25:14 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 10:25:14 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:25:14 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:25:14 DEBUG][39m Secrets loaded
+[32m[2019-06-11 10:25:14 INFO][39m Experiment looks valid
+[36m[2019-06-11 10:25:14 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:25:14 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:25:14 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:25:14 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 10:25:14 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:25:14 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:25:14 DEBUG][39m Secrets loaded
+[36m[2019-06-11 10:25:14 DEBUG][39m Initializing controls
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 10:25:14 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:25:14 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:25:14 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 17:25:14 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T10:25:12.752568'}'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:25:14 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:25:14 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:25:14 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 10:25:14 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 10:25:14 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:25:14 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:25:14 DEBUG][39m   => succeeded with '{'status': 500, 'headers': {'Date': 'Tue, 11 Jun 2019 17:25:14 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-Type': 'text/plain', 'Content-Length': '59'}, 'body': 'A server error occurred.  Please contact the administrator.'}'
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:25:14 DEBUG][39m allowed tolerance is [200, 503]
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'hypothesis'
+[31m[2019-06-11 10:25:14 CRITICAL][39m Steady state probe 'service-is-unavailable' is not in the given tolerance so failing this experiment
+[32m[2019-06-11 10:25:14 INFO][39m Let's rollback...
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:25:14 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:25:14 INFO][39m Experiment ended with status: deviated
+[32m[2019-06-11 10:25:14 INFO][39m The steady-state has deviated, a weakness may have been discovered
+[36m[2019-06-11 10:25:14 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 10:25:14 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 10:25:14 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:30:47 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:30:47 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:30:47 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:30:47 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 10:30:47 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:30:47 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:30:47 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 10:30:47 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:30:47 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:30:47 DEBUG][39m Secrets loaded
+[32m[2019-06-11 10:30:47 INFO][39m Experiment looks valid
+[36m[2019-06-11 10:30:47 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:30:47 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:30:47 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:30:47 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 10:30:47 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:30:47 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:30:47 DEBUG][39m Secrets loaded
+[36m[2019-06-11 10:30:47 DEBUG][39m Initializing controls
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 10:30:47 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:30:47 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:30:47 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 17:30:47 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T10:30:39.429046'}'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:30:47 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:30:47 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:30:47 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 10:30:47 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 10:30:47 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:30:47 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:30:47 DEBUG][39m   => succeeded with '{'status': 503, 'headers': {'Date': 'Tue, 11 Jun 2019 17:30:47 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': 'Exchange file is not ready'}'
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:30:47 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:30:47 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 10:30:47 INFO][39m Let's rollback...
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:30:47 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:30:47 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 10:30:47 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 10:30:47 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 10:30:47 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:57:13 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:57:13 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:57:13 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:57:14 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 10:57:30 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:57:30 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:57:30 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:57:30 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 10:57:30 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:57:30 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:57:30 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 10:57:30 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:57:30 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:57:30 DEBUG][39m Secrets loaded
+[32m[2019-06-11 10:57:30 INFO][39m Experiment looks valid
+[36m[2019-06-11 10:57:30 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:57:30 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:57:30 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:57:30 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 10:57:30 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:57:30 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:57:30 DEBUG][39m Secrets loaded
+[36m[2019-06-11 10:57:30 DEBUG][39m Initializing controls
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 10:57:30 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:57:30 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:57:30 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 17:57:30 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T10:57:23.549375'}'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:57:30 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:57:30 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:57:30 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 10:57:30 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 10:57:30 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:57:30 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:57:30 DEBUG][39m   => succeeded with '{'status': 503, 'headers': {'Date': 'Tue, 11 Jun 2019 17:57:30 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': 'Exchange file is not ready'}'
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:57:30 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:57:30 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 10:57:30 INFO][39m Let's rollback...
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:57:30 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:57:30 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 10:57:30 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 10:57:30 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 10:57:30 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:59:41 DEBUG][39m ###############################################################################
+[36m[2019-06-11 10:59:41 DEBUG][39m Running command 'run'
+[36m[2019-06-11 10:59:41 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 10:59:41 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 10:59:41 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:59:41 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:59:41 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 10:59:41 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:59:41 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:59:41 DEBUG][39m Secrets loaded
+[32m[2019-06-11 10:59:41 INFO][39m Experiment looks valid
+[36m[2019-06-11 10:59:41 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 10:59:41 DEBUG][39m Building activity cache...
+[36m[2019-06-11 10:59:41 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 10:59:41 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 10:59:41 DEBUG][39m Loading configuration...
+[36m[2019-06-11 10:59:41 DEBUG][39m Loading secrets...
+[36m[2019-06-11 10:59:41 DEBUG][39m Secrets loaded
+[36m[2019-06-11 10:59:41 DEBUG][39m Initializing controls
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 10:59:41 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:59:41 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:59:41 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 17:59:41 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T10:59:33.594748'}'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:59:41 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:59:41 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:59:41 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 10:59:41 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 10:59:41 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 10:59:41 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 10:59:41 DEBUG][39m   => succeeded with '{'status': 503, 'headers': {'Date': 'Tue, 11 Jun 2019 17:59:41 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': 'Exchange file is not ready'}'
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 10:59:41 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 10:59:41 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 10:59:41 INFO][39m Let's rollback...
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:59:41 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 10:59:41 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 10:59:41 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 10:59:41 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 10:59:41 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 11:01:33 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:01:33 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:01:33 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:01:33 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:01:33 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:01:33 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:01:33 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 11:01:33 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:01:33 DEBUG][39m Clearing activities cache
+[31m[2019-06-11 11:01:33 ERROR][39m Configuration makes reference to an environment key that does not exist: PROTOCOL
+[36m[2019-06-11 11:01:33 DEBUG][39m Configuration makes reference to an environment key that does not exist: PROTOCOL
+[36m[2019-06-11 11:01:55 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:01:55 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:01:55 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:01:55 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:01:55 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:01:55 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:01:55 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 11:01:55 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:01:55 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:01:55 DEBUG][39m Secrets loaded
+[36m[2019-06-11 11:01:55 DEBUG][39m Clearing activities cache
+[31m[2019-06-11 11:01:55 ERROR][39m unknown provider type '${protocol}'
+[36m[2019-06-11 11:01:55 DEBUG][39m unknown provider type '${protocol}'
+[36m[2019-06-11 11:02:48 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:02:48 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:02:48 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:02:48 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:02:48 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:02:48 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:02:48 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 11:02:48 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:02:48 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:02:48 DEBUG][39m Secrets loaded
+[36m[2019-06-11 11:02:48 DEBUG][39m Clearing activities cache
+[31m[2019-06-11 11:02:48 ERROR][39m unknown provider type '${protocol}'
+[36m[2019-06-11 11:02:48 DEBUG][39m unknown provider type '${protocol}'
+[36m[2019-06-11 11:03:59 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:03:59 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:03:59 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:03:59 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:03:59 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:03:59 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:03:59 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 11:03:59 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:03:59 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:03:59 DEBUG][39m Secrets loaded
+[32m[2019-06-11 11:03:59 INFO][39m Experiment looks valid
+[36m[2019-06-11 11:03:59 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 11:03:59 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:03:59 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:03:59 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 11:03:59 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:03:59 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:03:59 DEBUG][39m Secrets loaded
+[36m[2019-06-11 11:03:59 DEBUG][39m Initializing controls
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 11:03:59 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:03:59 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 11:03:59 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 18:03:59 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T11:03:53.698647'}'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:03:59 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 11:03:59 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:03:59 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 11:03:59 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 11:03:59 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:03:59 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 11:03:59 DEBUG][39m   => succeeded with '{'status': 503, 'headers': {'Date': 'Tue, 11 Jun 2019 18:03:59 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': 'Exchange file is not ready'}'
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:03:59 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 11:03:59 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 11:03:59 INFO][39m Let's rollback...
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 11:03:59 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 11:03:59 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 11:03:59 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 11:03:59 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 11:03:59 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 11:04:12 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:04:12 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:04:12 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:04:12 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:04:12 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:04:12 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:04:12 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 11:04:12 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:04:12 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:04:12 DEBUG][39m Secrets loaded
+[32m[2019-06-11 11:04:12 INFO][39m Experiment looks valid
+[36m[2019-06-11 11:04:12 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 11:04:12 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:04:12 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:04:12 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 11:04:12 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:04:12 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:04:12 DEBUG][39m Secrets loaded
+[36m[2019-06-11 11:04:12 DEBUG][39m Initializing controls
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 11:04:12 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:04:12 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 11:04:12 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 18:04:12 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T11:04:03.699355'}'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:04:12 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 11:04:12 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:04:12 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 11:04:12 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 11:04:12 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:04:12 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 11:04:12 DEBUG][39m   => succeeded with '{'status': 503, 'headers': {'Date': 'Tue, 11 Jun 2019 18:04:12 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': 'Exchange file is not ready'}'
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:04:12 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 11:04:12 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 11:04:12 INFO][39m Let's rollback...
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 11:04:12 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 11:04:12 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 11:04:12 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 11:04:12 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 11:04:12 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 11:33:05 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:33:05 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:33:05 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:33:06 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:33:24 DEBUG][39m ###############################################################################
+[36m[2019-06-11 11:33:24 DEBUG][39m Running command 'run'
+[36m[2019-06-11 11:33:24 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 11:33:24 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 11:33:24 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:33:24 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:33:24 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 11:33:24 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:33:24 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:33:24 DEBUG][39m Secrets loaded
+[32m[2019-06-11 11:33:24 INFO][39m Experiment looks valid
+[36m[2019-06-11 11:33:24 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 11:33:24 DEBUG][39m Building activity cache...
+[36m[2019-06-11 11:33:24 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 11:33:24 INFO][39m Running experiment: Does our service tolerate the loss of its exchange file?
+[36m[2019-06-11 11:33:24 DEBUG][39m Loading configuration...
+[36m[2019-06-11 11:33:24 DEBUG][39m Loading secrets...
+[36m[2019-06-11 11:33:24 DEBUG][39m Secrets loaded
+[36m[2019-06-11 11:33:24 DEBUG][39m Initializing controls
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 11:33:24 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:33:24 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 11:33:24 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Date': 'Tue, 11 Jun 2019 18:33:24 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': '2019-06-11T11:33:24.346270'}'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:33:24 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 11:33:24 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:33:24 INFO][39m Action: move-exchange-file
+[36m[2019-06-11 11:33:24 DEBUG][39m   => succeeded without any result value
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 11:33:24 INFO][39m Steady state hypothesis: The exchange file must exist
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 11:33:24 INFO][39m Probe: service-is-unavailable
+[36m[2019-06-11 11:33:24 DEBUG][39m   => succeeded with '{'status': 503, 'headers': {'Date': 'Tue, 11 Jun 2019 18:33:24 GMT', 'Server': 'WSGIServer/0.2 CPython/3.7.3', 'Content-type': 'text/plain', 'Content-Length': '26'}, 'body': 'Exchange file is not ready'}'
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 11:33:24 DEBUG][39m allowed tolerance is [200, 503]
+[32m[2019-06-11 11:33:24 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 11:33:24 INFO][39m Let's rollback...
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 11:33:24 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 11:33:24 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 11:33:24 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 11:33:24 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 11:33:24 DEBUG][39m Clearing activities cache

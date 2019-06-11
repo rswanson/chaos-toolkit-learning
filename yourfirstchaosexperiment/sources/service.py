@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 import io
+import os.path
 import time
 import threading
 from wsgiref.validate import validator
@@ -26,6 +27,13 @@ def simple_app(environ, start_response):
     """
     Read the content of the exchange file and return it.
     """
+    if not os.path.exists(EXCHANGE_FILE):
+        start_response(
+            '503 Service Unavailable',
+            [('Content-type', 'text/plain')]
+        )
+        return [b'Exchange file is not ready']
+
     start_response('200 OK', [('Content-type', 'text/plain')])
     with io.open(EXCHANGE_FILE) as f:
         return [f.read().encode('utf-8')]
