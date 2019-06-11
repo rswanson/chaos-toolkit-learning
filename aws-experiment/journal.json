@@ -1,0 +1,182 @@
+{
+  "chaoslib-version": "1.4.0",
+  "platform": "Darwin-18.6.0-x86_64-i386-64bit",
+  "node": "MacBook-Pro-4.local",
+  "experiment": {
+    "title": "testing what happens if I stop an ec2 instance",
+    "description": "this is a first stab at using the aws chaostoolkit plugin that will take a sample app spawned with elastic beanstalk and then will stop it",
+    "contributions": {
+      "reliability": "high",
+      "availability": "high",
+      "security": "none"
+    },
+    "tags": [
+      "aws"
+    ],
+    "configuration": {
+      "placeholder": "temp"
+    },
+    "secrets": {
+      "dummy": {
+        "temp": "temp"
+      }
+    },
+    "steady-state-hypothesis": {
+      "title": "Webpage is Available",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "website-must-be-up",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "url": "http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com"
+          }
+        }
+      ]
+    },
+    "method": [
+      {
+        "type": "action",
+        "name": "stop-an-ec2-instance",
+        "provider": {
+          "type": "python",
+          "module": "chaosaws.ec2.actions",
+          "func": "stop_instance",
+          "arguments": {
+            "az": "us-east-1d"
+          }
+        },
+        "pauses": {
+          "after": 10
+        }
+      }
+    ],
+    "dry": false
+  },
+  "start": "2019-06-11T19:25:59.608767",
+  "status": "completed",
+  "deviated": false,
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "website-must-be-up",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "url": "http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com"
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "Server": "nginx/1.14.1",
+              "Date": "Tue, 11 Jun 2019 19:25:59 GMT",
+              "Content-Type": "text/html",
+              "Transfer-Encoding": "chunked",
+              "Connection": "keep-alive",
+              "Content-Encoding": "gzip"
+            },
+            "body": "\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the \"license\" file accompanying this file. This file is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id=\"sample\">\n  <div class=\"textColumn\">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class=\"linksColumn\"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href=\"https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be\">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href=\"https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be\">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href=\"https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache\">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href=\"https://github.com/awslabs/eb-py-flask-signup/tree/docker\">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href=\"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html\">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href=\"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/\">AWS Elastic Beanstalk overview</a></li>\n    <li><a href=\"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html\">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n"
+          },
+          "status": "succeeded",
+          "start": "2019-06-11T19:25:59.609694",
+          "end": "2019-06-11T19:25:59.776225",
+          "duration": 0.166531,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "website-must-be-up",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "url": "http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com"
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "Server": "nginx/1.14.1",
+              "Date": "Tue, 11 Jun 2019 19:26:10 GMT",
+              "Content-Type": "text/html",
+              "Transfer-Encoding": "chunked",
+              "Connection": "keep-alive",
+              "Content-Encoding": "gzip"
+            },
+            "body": "\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the \"license\" file accompanying this file. This file is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id=\"sample\">\n  <div class=\"textColumn\">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class=\"linksColumn\"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href=\"https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be\">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href=\"https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be\">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href=\"https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache\">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href=\"https://github.com/awslabs/eb-py-flask-signup/tree/docker\">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href=\"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html\">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href=\"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/\">AWS Elastic Beanstalk overview</a></li>\n    <li><a href=\"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html\">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n"
+          },
+          "status": "succeeded",
+          "start": "2019-06-11T19:26:10.642231",
+          "end": "2019-06-11T19:26:10.811442",
+          "duration": 0.169211,
+          "tolerance_met": true
+        }
+      ]
+    }
+  },
+  "run": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "stop-an-ec2-instance",
+        "provider": {
+          "type": "python",
+          "module": "chaosaws.ec2.actions",
+          "func": "stop_instance",
+          "arguments": {
+            "az": "us-east-1d"
+          }
+        },
+        "pauses": {
+          "after": 10
+        }
+      },
+      "output": [
+        {
+          "StoppingInstances": [
+            {
+              "CurrentState": {
+                "Code": 64,
+                "Name": "stopping"
+              },
+              "InstanceId": "i-017c48d7588d55c1b",
+              "PreviousState": {
+                "Code": 16,
+                "Name": "running"
+              }
+            }
+          ],
+          "ResponseMetadata": {
+            "RequestId": "cc9d5056-686e-4efd-b79b-9e7231cf21f3",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+              "content-type": "text/xml;charset=UTF-8",
+              "content-length": "579",
+              "date": "Tue, 11 Jun 2019 19:26:00 GMT",
+              "server": "AmazonEC2"
+            },
+            "RetryAttempts": 0
+          }
+        }
+      ],
+      "status": "succeeded",
+      "start": "2019-06-11T19:25:59.777088",
+      "end": "2019-06-11T19:26:00.636966",
+      "duration": 0.859878
+    }
+  ],
+  "rollbacks": [],
+  "end": "2019-06-11T19:26:10.812132",
+  "duration": 11.21575927734375
+}

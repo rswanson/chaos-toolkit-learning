@@ -1,0 +1,52 @@
+{
+  "title" : "testing what happens if I stop an ec2 instance",
+  "description" : "this is a first stab at using the aws chaostoolkit plugin that will take a sample app spawned with elastic beanstalk and then will stop it",
+  "contributions" : {
+    "reliability" : "high",
+    "availability" : "high",
+    "security" : "none"
+  },
+  "tags" : [ 
+    "aws"
+  ],
+  "configuration" : {
+    "placeholder" : "temp"  
+  },
+  "secrets" : {
+    "dummy" : {
+      "temp" : "temp"
+    }
+  },
+  "steady-state-hypothesis" : {
+    "title" : "Webpage is Available",
+    "probes" : [
+      {
+        "type" : "probe",
+        "name" : "website-must-be-up",
+        "tolerance" : 200,
+        "provider" : {
+          "type" : "http",
+          "url" : "http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com"
+        }
+      }
+    ]
+  },
+  "method" : [
+    {
+      "type" : "action",
+      "name" : "stop-an-ec2-instance",
+      "provider" : {
+        "type" : "python",
+        "module" : "chaosaws.ec2.actions",
+        "func" : "stop_instance",
+        "arguments" : {
+          "az" : "us-east-1d"
+        }
+      },
+      "pauses" : {
+        "after" : 10
+      }
+    }
+  ]
+}
+

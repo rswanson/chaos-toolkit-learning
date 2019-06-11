@@ -1,0 +1,541 @@
+[36m[2019-06-11 12:06:56 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:06:56 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:06:56 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:06:56 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:09:53 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:09:53 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:09:53 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:09:53 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:09:53 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:09:53 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:09:53 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:09:53 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:09:53 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:09:53 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:09:53 DEBUG][39m Clearing activities cache
+[31m[2019-06-11 12:09:53 ERROR][39m an activity must have a type
+[36m[2019-06-11 12:09:53 DEBUG][39m an activity must have a type
+[36m[2019-06-11 12:10:33 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:10:33 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:10:33 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:10:34 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:10:34 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:10:34 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:10:34 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:10:34 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:10:34 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:10:34 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:10:34 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:10:34 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:10:34 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:10:34 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:10:34 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:10:34 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:10:34 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:10:34 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:10:34 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:10:34 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:10:34 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:10:34 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:10:34 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:10:34 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:10:34 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/activity.py", line 223, in run_activity
+        result = run_http_activity(activity, configuration, secrets)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/http.py", line 48, in run_http_activity
+        verify=verify_tls)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/api.py", line 75, in get
+        return request('get', url, params=params, **kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/api.py", line 60, in request
+        return session.request(method=method, url=url, **kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/sessions.py", line 519, in request
+        prep = self.prepare_request(req)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/sessions.py", line 462, in prepare_request
+        hooks=merge_hooks(request.hooks, self.hooks),
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/models.py", line 313, in prepare
+        self.prepare_url(url, params)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/models.py", line 387, in prepare_url
+        raise MissingSchema(error)
+    requests.exceptions.MissingSchema: Invalid URL 'JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com': No schema supplied. Perhaps you meant http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com?
+[36m[2019-06-11 12:10:34 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:10:34 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:10:34 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:10:34 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:11:04 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:11:04 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:11:04 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:11:04 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:11:04 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:11:04 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:11:04 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:11:04 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:11:04 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:11:04 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:11:05 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:11:05 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:11:05 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:11:05 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:11:05 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:11:05 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:11:05 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:11:05 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:11:05 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:11:05 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:11:05 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:11:05 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:11:05 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:11:05 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:11:05 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 12:11:05 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:11:05 INFO][39m Action: stop-an-ec2-instance
+[36m[2019-06-11 12:11:05 DEBUG][39m Activity 'stop-an-ec2-instance' loaded from '/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py'
+[36m[2019-06-11 12:11:05 DEBUG][39m Using default AWS role
+[36m[2019-06-11 12:11:05 DEBUG][39m Picked EC2 instance 'defaultdict(typing.List, {'normal': ['i-05e27550772ee2409']})' from AZ 'None' to be stopped
+[36m[2019-06-11 12:11:05 DEBUG][39m Stopping instances: ['i-05e27550772ee2409']
+[36m[2019-06-11 12:11:06 DEBUG][39m   => succeeded with '[{'StoppingInstances': [{'CurrentState': {'Code': 64, 'Name': 'stopping'}, 'InstanceId': 'i-05e27550772ee2409', 'PreviousState': {'Code': 16, 'Name': 'running'}}], 'ResponseMetadata': {'RequestId': '4b9772c8-3c1d-4448-a035-16c6dc54225a', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '579', 'date': 'Tue, 11 Jun 2019 19:11:05 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}]'
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 12:11:06 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:11:06 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:11:06 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:11:06 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:11:06 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:11:06 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 12:11:06 INFO][39m Let's rollback...
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:11:06 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:11:06 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 12:11:06 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:11:06 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:11:06 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:11:37 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:11:37 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:11:37 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:11:38 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:11:38 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:11:38 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:11:38 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:11:38 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:11:38 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:11:38 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:11:38 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:11:38 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:11:38 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:11:38 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:11:38 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:11:38 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:11:38 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:11:38 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:11:38 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:11:38 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:11:38 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:11:38 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:11:38 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:11:38 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:12:00 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:12:00 DEBUG][39m No controls to apply on 'hypothesis'
+[33m[2019-06-11 12:12:00 WARNING][39m Received an exit signal, leaving without applying rollbacks.
+[32m[2019-06-11 12:12:00 INFO][39m Experiment ended with status: interrupted
+[36m[2019-06-11 12:12:00 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:12:00 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:12:00 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:16:00 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:16:00 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:16:00 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:16:00 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:16:00 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:16:00 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:16:00 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:16:00 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:16:00 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:16:00 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:16:00 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:16:00 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:16:00 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:16:00 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:16:00 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:16:00 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:16:00 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:16:00 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:16:00 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:16:00 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:16:00 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:16:00 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:16:00 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:16:00 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:16:01 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:16:01 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:16:01 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:16:01 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:16:01 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:16:01 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:16:01 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 12:16:01 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:16:01 INFO][39m Action: stop-an-ec2-instance
+[36m[2019-06-11 12:16:01 DEBUG][39m Activity 'stop-an-ec2-instance' loaded from '/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py'
+[36m[2019-06-11 12:16:01 DEBUG][39m Using default AWS role
+[36m[2019-06-11 12:16:01 DEBUG][39m Picked EC2 instance 'defaultdict(typing.List, {'normal': ['i-05e27550772ee2409']})' from AZ 'None' to be stopped
+[36m[2019-06-11 12:16:01 DEBUG][39m Stopping instances: ['i-05e27550772ee2409']
+[36m[2019-06-11 12:16:01 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py", line 62, in stop_instance
+        force=force, client=client)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py", line 532, in stop_instances_any_type
+        Force=force))
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/botocore/client.py", line 661, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    botocore.exceptions.ClientError: An error occurred (IncorrectInstanceState) when calling the StopInstances operation: This instance 'i-05e27550772ee2409' is not in a state from which it can be stopped.
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/activity.py", line 219, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/python.py", line 60, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py", line 62, in stop_instance
+        force=force, client=client)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py", line 532, in stop_instances_any_type
+        Force=force))
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+        return self._make_api_call(operation_name, kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/botocore/client.py", line 661, in _make_api_call
+        raise error_class(parsed_response, operation_name)
+    chaoslib.exceptions.ActivityFailed: botocore.exceptions.ClientError: An error occurred (IncorrectInstanceState) when calling the StopInstances operation: This instance 'i-05e27550772ee2409' is not in a state from which it can be stopped.
+[31m[2019-06-11 12:16:01 ERROR][39m   => failed: botocore.exceptions.ClientError: An error occurred (IncorrectInstanceState) when calling the StopInstances operation: This instance 'i-05e27550772ee2409' is not in a state from which it can be stopped.
+[32m[2019-06-11 12:16:01 INFO][39m Pausing after activity for 5s...
+[36m[2019-06-11 12:16:06 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:16:06 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 12:16:06 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:16:06 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:16:06 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:16:06 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:16:07 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:16:07 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:16:07 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:16:07 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:16:07 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:16:07 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 12:16:07 INFO][39m Let's rollback...
+[36m[2019-06-11 12:16:07 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:16:07 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 12:16:07 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:16:07 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 12:16:07 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:16:07 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:16:07 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:18:07 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:18:07 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:18:07 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:18:07 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:18:07 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:18:07 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:18:07 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:18:07 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:18:07 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:18:07 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:18:07 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:18:07 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:18:07 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:18:07 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:18:07 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:18:07 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:18:07 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:18:07 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:18:07 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:18:07 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:18:07 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:18:07 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:18:07 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:18:07 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:18:08 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:18:08 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:18:08 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:18:08 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:18:08 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:18:08 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:18:08 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 12:18:08 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:18:08 INFO][39m Action: stop-an-ec2-instance
+[36m[2019-06-11 12:18:08 DEBUG][39m Activity 'stop-an-ec2-instance' loaded from '/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py'
+[36m[2019-06-11 12:18:08 DEBUG][39m Using default AWS role
+[36m[2019-06-11 12:18:08 DEBUG][39m Picked EC2 instance 'defaultdict(typing.List, {'normal': ['i-040692781557a3b2b']})' from AZ 'None' to be stopped
+[36m[2019-06-11 12:18:08 DEBUG][39m Stopping instances: ['i-040692781557a3b2b']
+[36m[2019-06-11 12:18:08 DEBUG][39m   => succeeded with '[{'StoppingInstances': [{'CurrentState': {'Code': 64, 'Name': 'stopping'}, 'InstanceId': 'i-040692781557a3b2b', 'PreviousState': {'Code': 16, 'Name': 'running'}}], 'ResponseMetadata': {'RequestId': '8fb85ceb-3617-441d-993a-f2052ae6eb67', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '579', 'date': 'Tue, 11 Jun 2019 19:18:08 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}]'
+[32m[2019-06-11 12:18:08 INFO][39m Pausing after activity for 5s...
+[36m[2019-06-11 12:18:13 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:18:13 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 12:18:13 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:18:13 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:18:13 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:18:13 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:18:14 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:18:14 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:18:14 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:18:14 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:18:14 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:18:14 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 12:18:14 INFO][39m Let's rollback...
+[36m[2019-06-11 12:18:14 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:18:14 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 12:18:14 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:18:14 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 12:18:14 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:18:14 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:18:14 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:21:08 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:21:08 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:21:08 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:21:08 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:21:08 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:21:08 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:21:08 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:21:08 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:21:08 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:21:08 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:21:08 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:21:08 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:21:08 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:21:08 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:21:08 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:21:08 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:21:08 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:21:08 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:21:08 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:21:08 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:21:08 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:21:08 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:21:08 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:21:08 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:22:23 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+        (self._dns_host, self.port), self.timeout, **extra_kw)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/util/connection.py", line 80, in create_connection
+        raise err
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/util/connection.py", line 70, in create_connection
+        sock.connect(sa)
+    TimeoutError: [Errno 60] Operation timed out
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+        chunked=chunked)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/connectionpool.py", line 355, in _make_request
+        conn.request(method, url, **httplib_request_kw)
+      File "/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1229, in request
+        self._send_request(method, url, body, headers, encode_chunked)
+      File "/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1275, in _send_request
+        self.endheaders(body, encode_chunked=encode_chunked)
+      File "/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1224, in endheaders
+        self._send_output(message_body, encode_chunked=encode_chunked)
+      File "/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1016, in _send_output
+        self.send(msg)
+      File "/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 956, in send
+        self.connect()
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/connection.py", line 183, in connect
+        conn = self._new_conn()
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/connection.py", line 169, in _new_conn
+        self, "Failed to establish a new connection: %s" % e)
+    urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1130aa128>: Failed to establish a new connection: [Errno 60] Operation timed out
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+        timeout=timeout
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+        _stacktrace=sys.exc_info()[2])
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/urllib3/util/retry.py", line 399, in increment
+        raise MaxRetryError(_pool, url, error or ResponseError(cause))
+    urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='jenkinstest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1130aa128>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/http.py", line 48, in run_http_activity
+        verify=verify_tls)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/api.py", line 75, in get
+        return request('get', url, params=params, **kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/api.py", line 60, in request
+        return session.request(method=method, url=url, **kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+        resp = self.send(prep, **send_kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+        r = adapter.send(request, **kwargs)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+        raise ConnectionError(e, request=request)
+    requests.exceptions.ConnectionError: HTTPConnectionPool(host='jenkinstest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1130aa128>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/activity.py", line 223, in run_activity
+        result = run_http_activity(activity, configuration, secrets)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/http.py", line 82, in run_http_activity
+        u=url, x=str(cex)))
+    chaoslib.exceptions.ActivityFailed: failed to connect to http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com: HTTPConnectionPool(host='jenkinstest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1130aa128>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+[31m[2019-06-11 12:22:23 ERROR][39m   => failed: failed to connect to http://JenkinsTest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com: HTTPConnectionPool(host='jenkinstest-env.pypw9mpttm.us-east-1.elasticbeanstalk.com', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1130aa128>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+[36m[2019-06-11 12:22:23 DEBUG][39m No controls to apply on 'activity'
+[33m[2019-06-11 12:22:23 WARNING][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2019-06-11 12:22:23 DEBUG][39m No controls to apply on 'hypothesis'
+[31m[2019-06-11 12:22:23 CRITICAL][39m Steady state probe 'website-must-be-up' is not in the given tolerance so failing this experiment
+[32m[2019-06-11 12:22:23 INFO][39m Let's rollback...
+[36m[2019-06-11 12:22:23 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:22:23 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 12:22:23 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:22:23 INFO][39m Experiment ended with status: failed
+[36m[2019-06-11 12:22:23 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:22:23 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:22:23 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:25:11 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:25:11 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:25:11 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:25:11 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:25:11 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:25:11 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:25:11 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:25:11 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:25:11 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:25:11 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:25:12 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:25:12 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:25:12 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:25:12 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:25:12 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:25:12 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:25:12 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:25:12 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:25:12 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:25:12 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:25:12 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:25:12 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:25:12 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:25:12 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:25:12 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 12:25:12 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:25:12 INFO][39m Action: stop-an-ec2-instance
+[36m[2019-06-11 12:25:12 DEBUG][39m Activity 'stop-an-ec2-instance' loaded from '/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py'
+[33m[2019-06-11 12:25:12 WARNING][39m Based on configuration provided I am going to stop a random instance in AZ us-east-1!
+[36m[2019-06-11 12:25:12 DEBUG][39m Using default AWS role
+[36m[2019-06-11 12:25:12 DEBUG][39m EC2 instances query: [{'Name': 'availability-zone', 'Values': ['us-east-1']}]
+[36m[2019-06-11 12:25:13 DEBUG][39m Instances matching the filter query: {'Reservations': [], 'ResponseMetadata': {'RequestId': 'b5f3b53c-9f70-45a4-9c4e-98d27e17608c', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '230', 'date': 'Tue, 11 Jun 2019 19:25:12 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}
+[36m[2019-06-11 12:25:13 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py", line 53, in stop_instance
+        "No instances in availability zone: {}".format(az))
+    chaoslib.exceptions.ActivityFailed: No instances in availability zone: us-east-1
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/activity.py", line 219, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/python.py", line 60, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py", line 53, in stop_instance
+        "No instances in availability zone: {}".format(az))
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: No instances in availability zone: us-east-1
+[31m[2019-06-11 12:25:13 ERROR][39m   => failed: chaoslib.exceptions.ActivityFailed: No instances in availability zone: us-east-1
+[32m[2019-06-11 12:25:13 INFO][39m Pausing after activity for 10s...
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 12:25:23 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:25:23 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:25:23 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:25:23 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:25:23 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:25:23 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 12:25:23 INFO][39m Let's rollback...
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:25:23 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:25:23 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 12:25:23 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:25:23 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:25:23 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:25:59 DEBUG][39m ###############################################################################
+[36m[2019-06-11 12:25:59 DEBUG][39m Running command 'run'
+[36m[2019-06-11 12:25:59 DEBUG][39m Using settings file '/Users/swanpro/.chaostoolkit/settings.yaml'
+[36m[2019-06-11 12:25:59 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/swanpro/.chaostoolkit/settings.yaml'.
+[36m[2019-06-11 12:25:59 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:25:59 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:25:59 INFO][39m Validating the experiment's syntax
+[36m[2019-06-11 12:25:59 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:25:59 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:25:59 DEBUG][39m Secrets loaded
+[32m[2019-06-11 12:25:59 INFO][39m Experiment looks valid
+[36m[2019-06-11 12:25:59 DEBUG][39m Clearing activities cache
+[36m[2019-06-11 12:25:59 DEBUG][39m Building activity cache...
+[36m[2019-06-11 12:25:59 DEBUG][39m Cached 2 activities
+[32m[2019-06-11 12:25:59 INFO][39m Running experiment: testing what happens if I stop an ec2 instance
+[36m[2019-06-11 12:25:59 DEBUG][39m Loading configuration...
+[36m[2019-06-11 12:25:59 DEBUG][39m Loading secrets...
+[36m[2019-06-11 12:25:59 DEBUG][39m Secrets loaded
+[36m[2019-06-11 12:25:59 DEBUG][39m Initializing controls
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'experiment'
+[32m[2019-06-11 12:25:59 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:25:59 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:25:59 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:25:59 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:25:59 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:25:59 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'method'
+[36m[2019-06-11 12:25:59 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:25:59 INFO][39m Action: stop-an-ec2-instance
+[36m[2019-06-11 12:25:59 DEBUG][39m Activity 'stop-an-ec2-instance' loaded from '/Users/swanpro/.venvs/chaostk/lib/python3.7/site-packages/chaosaws/ec2/actions.py'
+[33m[2019-06-11 12:25:59 WARNING][39m Based on configuration provided I am going to stop a random instance in AZ us-east-1d!
+[36m[2019-06-11 12:25:59 DEBUG][39m Using default AWS role
+[36m[2019-06-11 12:25:59 DEBUG][39m EC2 instances query: [{'Name': 'availability-zone', 'Values': ['us-east-1d']}]
+[36m[2019-06-11 12:26:00 DEBUG][39m Instances matching the filter query: {'Reservations': [{'Groups': [{'GroupName': 'awseb-e-ppubmtzjwy-stack-AWSEBSecurityGroup-1UMUW0B92G6SP', 'GroupId': 'sg-09298c43d8f47e19e'}], 'Instances': [{'AmiLaunchIndex': 0, 'ImageId': 'ami-0600e42cbc2ff77b5', 'InstanceId': 'i-017c48d7588d55c1b', 'InstanceType': 't1.micro', 'LaunchTime': datetime.datetime(2019, 6, 11, 19, 20, 45, tzinfo=tzutc()), 'Monitoring': {'State': 'disabled'}, 'Placement': {'AvailabilityZone': 'us-east-1d', 'GroupName': '', 'Tenancy': 'default'}, 'PrivateDnsName': 'ip-10-166-247-130.ec2.internal', 'PrivateIpAddress': '10.166.247.130', 'ProductCodes': [], 'PublicDnsName': 'ec2-54-243-242-214.compute-1.amazonaws.com', 'PublicIpAddress': '54.243.242.214', 'State': {'Code': 16, 'Name': 'running'}, 'StateTransitionReason': '', 'Architecture': 'x86_64', 'BlockDeviceMappings': [{'DeviceName': '/dev/xvda', 'Ebs': {'AttachTime': datetime.datetime(2019, 6, 11, 19, 20, 45, tzinfo=tzutc()), 'DeleteOnTermination': True, 'Status': 'attached', 'VolumeId': 'vol-0bfa74827680f7874'}}, {'DeviceName': '/dev/xvdcz', 'Ebs': {'AttachTime': datetime.datetime(2019, 6, 11, 19, 20, 45, tzinfo=tzutc()), 'DeleteOnTermination': True, 'Status': 'attached', 'VolumeId': 'vol-016d47e3a111de095'}}], 'ClientToken': '7635ad1f-f116-468d-3502-7686ac57e92c_us-east-1d_1', 'EbsOptimized': False, 'EnaSupport': True, 'Hypervisor': 'xen', 'IamInstanceProfile': {'Arn': 'arn:aws:iam::837158543833:instance-profile/aws-elasticbeanstalk-ec2-role', 'Id': 'AIPA4F2UJUHMUQFQMBHEV'}, 'NetworkInterfaces': [], 'RootDeviceName': '/dev/xvda', 'RootDeviceType': 'ebs', 'SecurityGroups': [{'GroupName': 'awseb-e-ppubmtzjwy-stack-AWSEBSecurityGroup-1UMUW0B92G6SP', 'GroupId': 'sg-09298c43d8f47e19e'}], 'Tags': [{'Key': 'aws:autoscaling:groupName', 'Value': 'awseb-e-ppubmtzjwy-stack-AWSEBAutoScalingGroup-76OIEEK8Y9BM'}, {'Key': 'aws:cloudformation:logical-id', 'Value': 'AWSEBAutoScalingGroup'}, {'Key': 'aws:cloudformation:stack-name', 'Value': 'awseb-e-ppubmtzjwy-stack'}, {'Key': 'elasticbeanstalk:environment-id', 'Value': 'e-ppubmtzjwy'}, {'Key': 'aws:cloudformation:stack-id', 'Value': 'arn:aws:cloudformation:us-east-1:837158543833:stack/awseb-e-ppubmtzjwy-stack/6f9c01d0-8c78-11e9-8477-0a875441099a'}, {'Key': 'elasticbeanstalk:environment-name', 'Value': 'JenkinsTest-env'}, {'Key': 'Name', 'Value': 'JenkinsTest-env'}], 'VirtualizationType': 'hvm', 'CpuOptions': {'CoreCount': 1, 'ThreadsPerCore': 1}, 'CapacityReservationSpecification': {'CapacityReservationPreference': 'open'}, 'HibernationOptions': {'Configured': False}}], 'OwnerId': '837158543833', 'RequesterId': '940372691376', 'ReservationId': 'r-0fadba88de11caeef'}], 'ResponseMetadata': {'RequestId': '3d779d05-75b7-49ff-90a4-3b00be16972a', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '6156', 'vary': 'accept-encoding', 'date': 'Tue, 11 Jun 2019 19:26:00 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}
+[36m[2019-06-11 12:26:00 DEBUG][39m Picked EC2 instance '{'normal': ['i-017c48d7588d55c1b']}' from AZ 'us-east-1d' to be stopped
+[36m[2019-06-11 12:26:00 DEBUG][39m Stopping instances: ['i-017c48d7588d55c1b']
+[36m[2019-06-11 12:26:00 DEBUG][39m   => succeeded with '[{'StoppingInstances': [{'CurrentState': {'Code': 64, 'Name': 'stopping'}, 'InstanceId': 'i-017c48d7588d55c1b', 'PreviousState': {'Code': 16, 'Name': 'running'}}], 'ResponseMetadata': {'RequestId': 'cc9d5056-686e-4efd-b79b-9e7231cf21f3', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '579', 'date': 'Tue, 11 Jun 2019 19:26:00 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}]'
+[32m[2019-06-11 12:26:00 INFO][39m Pausing after activity for 10s...
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'method'
+[32m[2019-06-11 12:26:10 INFO][39m Steady state hypothesis: Webpage is Available
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'hypothesis'
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'activity'
+[32m[2019-06-11 12:26:10 INFO][39m Probe: website-must-be-up
+[36m[2019-06-11 12:26:10 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'nginx/1.14.1', 'Date': 'Tue, 11 Jun 2019 19:26:10 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip'}, 'body': '\n<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n  <!--\n    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\n    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at\n\n        http://aws.Amazon/apache2.0/\n\n    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n  -->\n  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n  <title>Welcome</title>\n  <style>\n  body {\n    color: #ffffff;\n    background-color: #E0E0E0;\n    font-family: Arial, sans-serif;\n    font-size:14px;\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: none;\n  }\n  body.blurry {\n    -moz-transition-property: text-shadow;\n    -moz-transition-duration: 4s;\n    -webkit-transition-property: text-shadow;\n    -webkit-transition-duration: 4s;\n    text-shadow: #fff 0px 0px 25px;\n  }\n  a {\n    color: #0188cc;\n  }\n  .textColumn, .linksColumn {\n    padding: 2em;\n  }\n  .textColumn {\n    position: absolute;\n    top: 0px;\n    right: 50%;\n    bottom: 0px;\n    left: 0px;\n\n    text-align: right;\n    padding-top: 11em;\n    background-color: #24B8EB;\n  }\n  .textColumn p {\n    width: 75%;\n    float:right;\n  }\n  .linksColumn {\n    position: absolute;\n    top:0px;\n    right: 0px;\n    bottom: 0px;\n    left: 50%;\n    background-color: #A9A9A9;\n  }\n\n  h1 {\n    font-size: 500%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  h2 {\n    font-size: 200%;\n    font-weight: normal;\n    margin-bottom: 0em;\n  }\n  ul {\n    padding-left: 1em;\n    margin: 0px;\n  }\n  li {\n    margin: 1em 0em;\n  }\n  </style>\n</head>\n<body id="sample">\n  <div class="textColumn">\n    <h1>Congratulations!</h1>\n    <p>Your Docker Container is now running in Elastic Beanstalk on your own dedicated environment in the AWS Cloud.</p>\n  </div>\n  \n  <div class="linksColumn"> \n    <h2>Video Tutorials</h2>\n    <ul>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=lBu7Ov3Rt-M&feature=youtu.be">Run a Docker Container from the Docker Registry</a></li>\n    <li>YouTube: <a href="https://www.youtube.com/watch?v=pLw6MLqwmew&feature=youtu.be">Use Private Docker Repositories</a></li>\n    </ul>\n    <h2>Sample Apps</h2>\n    <ul>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-demo-php-simple-app/tree/docker-apache">PHP and Amazon RDS</a></li>\n    <li>GitHub: <a href="https://github.com/awslabs/eb-py-flask-signup/tree/docker">Python, DynamoDB, and SNS</a></li>\n    </ul>\n    <h2>Documentation</h2>\n    <ul>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">Deploying Docker with AWS Elastic Beanstalk</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>\n    <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>\n    </ul>\n  </div>\n</body>\n</html>\n'}'
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'activity'
+[36m[2019-06-11 12:26:10 DEBUG][39m allowed tolerance is 200
+[32m[2019-06-11 12:26:10 INFO][39m Steady state hypothesis is met!
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'hypothesis'
+[32m[2019-06-11 12:26:10 INFO][39m Let's rollback...
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:26:10 INFO][39m No declared rollbacks, let's move on.
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'rollback'
+[32m[2019-06-11 12:26:10 INFO][39m Experiment ended with status: completed
+[36m[2019-06-11 12:26:10 DEBUG][39m No controls to apply on 'experiment'
+[36m[2019-06-11 12:26:10 DEBUG][39m Cleaning up controls
+[36m[2019-06-11 12:26:10 DEBUG][39m Clearing activities cache
