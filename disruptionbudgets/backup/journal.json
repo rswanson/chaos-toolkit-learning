@@ -1,0 +1,250 @@
+{
+  "chaoslib-version": "0.19.0",
+  "platform": "Darwin-17.6.0-x86_64-i386-64bit",
+  "node": "Bertrand.local",
+  "experiment": {
+    "version": "1.0.0",
+    "title": "My application is resilient to admin-instigated node drainage",
+    "description": "Can my application maintain its minimum resources?",
+    "tags": [
+      "service",
+      "kubernetes"
+    ],
+    "steady-state-hypothesis": {
+      "title": "Services are all available and healthy",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "application-must-respond-normally",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "url": "http://http://35.189.85.252/",
+            "timeout": 3
+          }
+        },
+        {
+          "type": "probe",
+          "name": "pods_in_phase",
+          "tolerance": true,
+          "provider": {
+            "type": "python",
+            "module": "chaosk8s.pod.probes",
+            "func": "pods_in_phase",
+            "arguments": {
+              "label_selector": "biz-app-id=retail",
+              "phase": "Running",
+              "ns": "default"
+            }
+          }
+        }
+      ]
+    },
+    "method": [
+      {
+        "type": "action",
+        "name": "drain_node",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.node.actions",
+          "func": "drain_nodes",
+          "arguments": {
+            "name": "gke-disruption-demo-default-pool-9fa7a856-jrvm",
+            "delete_pods_with_local_storage": true
+          }
+        }
+      }
+    ],
+    "rollbacks": [
+      {
+        "type": "action",
+        "name": "uncordon_node",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.node.actions",
+          "func": "uncordon_node",
+          "arguments": {
+            "name": "gke-disruption-demo-default-pool-9fa7a856-jrvm"
+          }
+        }
+      }
+    ],
+    "dry": false
+  },
+  "start": "2018-07-18T15:25:28.155345",
+  "status": "completed",
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "application-must-respond-normally",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "url": "http://http://35.189.85.252/",
+              "timeout": 3
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "Server": "BigIP",
+              "Connection": "Keep-Alive",
+              "Content-Length": "73"
+            },
+            "body": "<html><head><title>dns error</title></head><body>DNS Error</body></html>\n"
+          },
+          "status": "succeeded",
+          "start": "2018-07-18T15:25:28.156497",
+          "end": "2018-07-18T15:25:28.262225",
+          "duration": 0.105728,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "pods_in_phase",
+            "tolerance": true,
+            "provider": {
+              "type": "python",
+              "module": "chaosk8s.pod.probes",
+              "func": "pods_in_phase",
+              "arguments": {
+                "label_selector": "biz-app-id=retail",
+                "phase": "Running",
+                "ns": "default"
+              }
+            }
+          },
+          "output": true,
+          "status": "succeeded",
+          "start": "2018-07-18T15:25:28.262620",
+          "end": "2018-07-18T15:25:28.577213",
+          "duration": 0.314593,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "application-must-respond-normally",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "url": "http://http://35.189.85.252/",
+              "timeout": 3
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "Server": "BigIP",
+              "Connection": "Keep-Alive",
+              "Content-Length": "73"
+            },
+            "body": "<html><head><title>dns error</title></head><body>DNS Error</body></html>\n"
+          },
+          "status": "succeeded",
+          "start": "2018-07-18T15:25:29.145215",
+          "end": "2018-07-18T15:25:29.217105",
+          "duration": 0.07189,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "pods_in_phase",
+            "tolerance": true,
+            "provider": {
+              "type": "python",
+              "module": "chaosk8s.pod.probes",
+              "func": "pods_in_phase",
+              "arguments": {
+                "label_selector": "biz-app-id=retail",
+                "phase": "Running",
+                "ns": "default"
+              }
+            }
+          },
+          "output": true,
+          "status": "succeeded",
+          "start": "2018-07-18T15:25:29.217384",
+          "end": "2018-07-18T15:25:29.377214",
+          "duration": 0.15983,
+          "tolerance_met": true
+        }
+      ]
+    }
+  },
+  "run": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "drain_node",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.node.actions",
+          "func": "drain_nodes",
+          "arguments": {
+            "name": "gke-disruption-demo-default-pool-9fa7a856-jrvm",
+            "delete_pods_with_local_storage": true
+          }
+        }
+      },
+      "output": null,
+      "status": "failed",
+      "exception": [
+        "Traceback (most recent call last):\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/node/actions.py\", line 302, in drain_nodes\n    pod.metadata.name, pod.metadata.namespace, body=eviction)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/apis/core_v1_api.py\", line 6279, in create_namespaced_pod_eviction\n    (data) = self.create_namespaced_pod_eviction_with_http_info(name, namespace, body, **kwargs)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/apis/core_v1_api.py\", line 6370, in create_namespaced_pod_eviction_with_http_info\n    collection_formats=collection_formats)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/api_client.py\", line 321, in call_api\n    _return_http_data_only, collection_formats, _preload_content, _request_timeout)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/api_client.py\", line 155, in __call_api\n    _request_timeout=_request_timeout)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/api_client.py\", line 364, in request\n    body=body)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/rest.py\", line 266, in POST\n    body=body)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/rest.py\", line 222, in request\n    raise ApiException(http_resp=r)\n",
+        "kubernetes.client.rest.ApiException: (429)\nReason: Too Many Requests\nHTTP response headers: HTTPHeaderDict({'Audit-Id': '2cc45715-7c14-4a3b-b9a9-e58c16d613d4', 'Content-Type': 'application/json', 'Date': 'Wed, 18 Jul 2018 15:25:28 GMT', 'Content-Length': '324'})\nHTTP response body: {\"kind\":\"Status\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failure\",\"message\":\"Cannot evict pod as it would violate the pod's disruption budget.\",\"reason\":\"TooManyRequests\",\"details\":{\"causes\":[{\"reason\":\"DisruptionBudget\",\"message\":\"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently\"}]},\"code\":429}\n\n\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "Traceback (most recent call last):\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py\", line 50, in run_python_activity\n    return func(**arguments)\n",
+        "  File \"/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/node/actions.py\", line 306, in drain_nodes\n    pod.metadata.name, x.body))\n",
+        "chaoslib.exceptions.FailedActivity: Failed to evict pod my-service-6dc649f897-7m72z: {\"kind\":\"Status\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failure\",\"message\":\"Cannot evict pod as it would violate the pod's disruption budget.\",\"reason\":\"TooManyRequests\",\"details\":{\"causes\":[{\"reason\":\"DisruptionBudget\",\"message\":\"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently\"}]},\"code\":429}\n\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "chaoslib.exceptions.FailedActivity: chaoslib.exceptions.FailedActivity: Failed to evict pod my-service-6dc649f897-7m72z: {\"kind\":\"Status\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failure\",\"message\":\"Cannot evict pod as it would violate the pod's disruption budget.\",\"reason\":\"TooManyRequests\",\"details\":{\"causes\":[{\"reason\":\"DisruptionBudget\",\"message\":\"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently\"}]},\"code\":429}\n"
+      ],
+      "start": "2018-07-18T15:25:28.577677",
+      "end": "2018-07-18T15:25:29.144818",
+      "duration": 0.567141
+    }
+  ],
+  "rollbacks": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "uncordon_node",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.node.actions",
+          "func": "uncordon_node",
+          "arguments": {
+            "name": "gke-disruption-demo-default-pool-9fa7a856-jrvm"
+          }
+        }
+      },
+      "output": null,
+      "status": "succeeded",
+      "start": "2018-07-18T15:25:29.377978",
+      "end": "2018-07-18T15:25:29.664221",
+      "duration": 0.286243
+    }
+  ],
+  "end": "2018-07-18T15:25:29.664240",
+  "duration": 1.5285940170288086
+}

@@ -1,0 +1,321 @@
+[36m[2018-07-18 16:12:26 DEBUG][39m ###############################################################################
+[36m[2018-07-18 16:12:26 DEBUG][39m Running command 'run'
+[36m[2018-07-18 16:12:26 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:12:26 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:12:26 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:12:26 INFO][39m Validating the experiment's syntax
+[36m[2018-07-18 16:12:26 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:12:26 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:12:26 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:12:26 INFO][39m Experiment looks valid
+[36m[2018-07-18 16:12:26 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:12:26 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:12:26 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:12:26 INFO][39m Running experiment: My application is resilient to Node Drainage
+[36m[2018-07-18 16:12:26 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:12:26 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:12:26 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:12:26 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:12:26 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:12:26 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:12:26 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:12:26 INFO][39m Pausing before next activity for 20s...
+[32m[2018-07-18 16:12:46 INFO][39m Probe: pods_in_phase
+[36m[2018-07-18 16:12:46 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:12:47 DEBUG][39m Found 3 pods matching label 'biz-app-id=retail'
+[36m[2018-07-18 16:12:47 DEBUG][39m   => succeeded with 'True'
+[36m[2018-07-18 16:12:47 DEBUG][39m allowed tolerance is True
+[32m[2018-07-18 16:12:47 INFO][39m Steady state hypothesis is met!
+[32m[2018-07-18 16:12:47 INFO][39m Action: drain_node
+[36m[2018-07-18 16:12:47 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:12:47 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:12:47 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:12:47 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:12:47 DEBUG][39m Found 4 pods on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:12:47 DEBUG][39m Pod 'fluentd-gcp-v2.0.17-5k6t9' on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm' is owned by a DaemonSet. Will not evict it
+[36m[2018-07-18 16:12:47 DEBUG][39m Not deleting mirror pod 'kube-proxy-gke-disruption-demo-default-pool-9fa7a856-jrvm' on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:12:47 DEBUG][39m Found 2 pods to evict
+[36m[2018-07-18 16:12:47 DEBUG][39m Waiting for 2 pods to go
+[36m[2018-07-18 16:12:47 DEBUG][39m Pod 'my-service-6dc649f897-mtd9c' still around in phase: Running
+[36m[2018-07-18 16:12:48 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:12:58 DEBUG][39m Waiting for 2 pods to go
+[36m[2018-07-18 16:12:58 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:13:08 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:13:08 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:13:18 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:13:18 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:13:28 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:13:28 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:13:38 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:13:38 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:13:48 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:13:48 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:13:58 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:13:58 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-54shv' still around in phase: Running
+[36m[2018-07-18 16:14:08 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:14:08 DEBUG][39m Evicted all pods we could
+[36m[2018-07-18 16:14:08 DEBUG][39m   => succeeded with 'True'
+[32m[2018-07-18 16:14:08 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:14:08 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:14:08 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:14:08 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:14:08 INFO][39m Pausing before next activity for 20s...
+[32m[2018-07-18 16:14:28 INFO][39m Probe: pods_in_phase
+[36m[2018-07-18 16:14:28 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:14:28 DEBUG][39m Found 3 pods matching label 'biz-app-id=retail'
+[36m[2018-07-18 16:14:28 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/pod/probes.py", line 98, in pods_in_phase
+        name=label_selector, s=d.status.phase, p=phase))
+    chaoslib.exceptions.FailedActivity: pod 'biz-app-id=retail' is in phase 'Pending' but should be 'Running'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/pod/probes.py", line 98, in pods_in_phase
+        name=label_selector, s=d.status.phase, p=phase))
+    chaoslib.exceptions.FailedActivity: chaoslib.exceptions.FailedActivity: pod 'biz-app-id=retail' is in phase 'Pending' but should be 'Running'
+[31m[2018-07-18 16:14:28 ERROR][39m   => failed: chaoslib.exceptions.FailedActivity: pod 'biz-app-id=retail' is in phase 'Pending' but should be 'Running'
+[33m[2018-07-18 16:14:28 WARNING][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[2018-07-18 16:14:28 CRITICAL] Steady state probe 'pods_in_phase' is not in the given tolerance so failing this experiment
+[32m[2018-07-18 16:14:28 INFO][39m Let's rollback...
+[32m[2018-07-18 16:14:28 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-07-18 16:14:28 INFO][39m Experiment ended with status: failed
+[36m[2018-07-18 16:14:28 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:14:28 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:21:16 DEBUG][39m ###############################################################################
+[36m[2018-07-18 16:21:16 DEBUG][39m Running command 'run'
+[36m[2018-07-18 16:21:16 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:21:16 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:21:16 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:21:16 INFO][39m Validating the experiment's syntax
+[36m[2018-07-18 16:21:16 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:21:16 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:21:16 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:21:17 INFO][39m Experiment looks valid
+[36m[2018-07-18 16:21:17 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:21:17 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:21:17 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:21:17 INFO][39m Running experiment: My application is resilient to admin-instrigated node drainage
+[36m[2018-07-18 16:21:17 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:21:17 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:21:17 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:21:17 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:21:17 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:21:17 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:21:17 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:21:17 INFO][39m Pausing before next activity for 20s...
+[33m[2018-07-18 16:21:23 WARNING][39m Received an exit signal, leaving without applying rollbacks.
+[32m[2018-07-18 16:21:23 INFO][39m Experiment ended with status: interrupted
+[36m[2018-07-18 16:21:23 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:21:23 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:21:46 DEBUG][39m ###############################################################################
+[36m[2018-07-18 16:21:46 DEBUG][39m Running command 'run'
+[36m[2018-07-18 16:21:46 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:21:46 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:21:46 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:21:46 INFO][39m Validating the experiment's syntax
+[36m[2018-07-18 16:21:46 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:21:46 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:21:46 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:21:47 INFO][39m Experiment looks valid
+[36m[2018-07-18 16:21:47 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:21:47 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:21:47 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:21:47 INFO][39m Running experiment: My application is resilient to admin-instrigated node drainage
+[36m[2018-07-18 16:21:47 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:21:47 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:21:47 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:21:47 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:21:47 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:21:47 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:21:47 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:21:47 INFO][39m Probe: pods_in_phase
+[36m[2018-07-18 16:21:47 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:21:47 DEBUG][39m Found 3 pods matching label 'biz-app-id=retail'
+[36m[2018-07-18 16:21:47 DEBUG][39m   => succeeded with 'True'
+[36m[2018-07-18 16:21:47 DEBUG][39m allowed tolerance is True
+[32m[2018-07-18 16:21:47 INFO][39m Steady state hypothesis is met!
+[32m[2018-07-18 16:21:47 INFO][39m Action: drain_node
+[36m[2018-07-18 16:21:47 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:21:47 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:21:47 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:21:47 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:21:48 DEBUG][39m Found 4 pods on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:21:48 DEBUG][39m Pod 'fluentd-gcp-v2.0.17-5k6t9' on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm' is owned by a DaemonSet. Will not evict it
+[36m[2018-07-18 16:21:48 DEBUG][39m Not deleting mirror pod 'kube-proxy-gke-disruption-demo-default-pool-9fa7a856-jrvm' on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:21:48 DEBUG][39m Found 2 pods to evict
+[36m[2018-07-18 16:21:48 DEBUG][39m Waiting for 2 pods to go
+[36m[2018-07-18 16:21:48 DEBUG][39m Pod 'my-service-6dc649f897-ffnl8' still around in phase: Running
+[36m[2018-07-18 16:21:48 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:21:58 DEBUG][39m Waiting for 2 pods to go
+[36m[2018-07-18 16:21:58 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:22:08 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:22:08 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:22:18 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:22:18 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:22:28 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:22:28 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:22:38 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:22:38 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:22:48 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:22:48 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:22:58 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:22:58 DEBUG][39m Pod 'kube-dns-5dcfcbf5fb-q56dx' still around in phase: Running
+[36m[2018-07-18 16:23:08 DEBUG][39m Waiting for 1 pods to go
+[36m[2018-07-18 16:23:08 DEBUG][39m Evicted all pods we could
+[36m[2018-07-18 16:23:08 DEBUG][39m   => succeeded with 'True'
+[32m[2018-07-18 16:23:08 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:23:08 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:23:08 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:23:08 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:23:08 INFO][39m Probe: pods_in_phase
+[36m[2018-07-18 16:23:08 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:23:09 DEBUG][39m Found 3 pods matching label 'biz-app-id=retail'
+[36m[2018-07-18 16:23:09 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/pod/probes.py", line 98, in pods_in_phase
+        name=label_selector, s=d.status.phase, p=phase))
+    chaoslib.exceptions.FailedActivity: pod 'biz-app-id=retail' is in phase 'Pending' but should be 'Running'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/pod/probes.py", line 98, in pods_in_phase
+        name=label_selector, s=d.status.phase, p=phase))
+    chaoslib.exceptions.FailedActivity: chaoslib.exceptions.FailedActivity: pod 'biz-app-id=retail' is in phase 'Pending' but should be 'Running'
+[31m[2018-07-18 16:23:09 ERROR][39m   => failed: chaoslib.exceptions.FailedActivity: pod 'biz-app-id=retail' is in phase 'Pending' but should be 'Running'
+[33m[2018-07-18 16:23:09 WARNING][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[2018-07-18 16:23:09 CRITICAL] Steady state probe 'pods_in_phase' is not in the given tolerance so failing this experiment
+[32m[2018-07-18 16:23:09 INFO][39m Let's rollback...
+[32m[2018-07-18 16:23:09 INFO][39m Rollback: uncordon_node
+[32m[2018-07-18 16:23:09 INFO][39m Action: uncordon_node
+[36m[2018-07-18 16:23:09 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:23:09 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:23:09 DEBUG][39m Found 1 nodes labelled 'None'
+[36m[2018-07-18 16:23:09 DEBUG][39m   => succeeded without any result value
+[32m[2018-07-18 16:23:09 INFO][39m Experiment ended with status: failed
+[36m[2018-07-18 16:23:09 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:23:09 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:25:27 DEBUG][39m ###############################################################################
+[36m[2018-07-18 16:25:27 DEBUG][39m Running command 'run'
+[36m[2018-07-18 16:25:27 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 16:25:27 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:25:27 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:25:27 INFO][39m Validating the experiment's syntax
+[36m[2018-07-18 16:25:27 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:25:27 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:25:27 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:25:28 INFO][39m Experiment looks valid
+[36m[2018-07-18 16:25:28 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:25:28 DEBUG][39m Building activity cache...
+[36m[2018-07-18 16:25:28 DEBUG][39m Cached 3 activities
+[32m[2018-07-18 16:25:28 INFO][39m Running experiment: My application is resilient to admin-instigated node drainage
+[36m[2018-07-18 16:25:28 DEBUG][39m Loading configuration...
+[36m[2018-07-18 16:25:28 DEBUG][39m Loading secrets...
+[36m[2018-07-18 16:25:28 DEBUG][39m Secrets loaded
+[32m[2018-07-18 16:25:28 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:25:28 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:25:28 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:25:28 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:25:28 INFO][39m Probe: pods_in_phase
+[36m[2018-07-18 16:25:28 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:25:28 DEBUG][39m Found 3 pods matching label 'biz-app-id=retail'
+[36m[2018-07-18 16:25:28 DEBUG][39m   => succeeded with 'True'
+[36m[2018-07-18 16:25:28 DEBUG][39m allowed tolerance is True
+[32m[2018-07-18 16:25:28 INFO][39m Steady state hypothesis is met!
+[32m[2018-07-18 16:25:28 INFO][39m Action: drain_node
+[36m[2018-07-18 16:25:28 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:25:28 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:25:28 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:25:29 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:25:29 DEBUG][39m Found 4 pods on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:25:29 DEBUG][39m Pod 'fluentd-gcp-v2.0.17-5k6t9' on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm' is owned by a DaemonSet. Will not evict it
+[36m[2018-07-18 16:25:29 DEBUG][39m Not deleting mirror pod 'kube-proxy-gke-disruption-demo-default-pool-9fa7a856-jrvm' on node 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:25:29 DEBUG][39m Found 2 pods to evict
+[36m[2018-07-18 16:25:29 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/node/actions.py", line 302, in drain_nodes
+        pod.metadata.name, pod.metadata.namespace, body=eviction)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/apis/core_v1_api.py", line 6279, in create_namespaced_pod_eviction
+        (data) = self.create_namespaced_pod_eviction_with_http_info(name, namespace, body, **kwargs)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/apis/core_v1_api.py", line 6370, in create_namespaced_pod_eviction_with_http_info
+        collection_formats=collection_formats)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/api_client.py", line 321, in call_api
+        _return_http_data_only, collection_formats, _preload_content, _request_timeout)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/api_client.py", line 155, in __call_api
+        _request_timeout=_request_timeout)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/api_client.py", line 364, in request
+        body=body)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/rest.py", line 266, in POST
+        body=body)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/kubernetes/client/rest.py", line 222, in request
+        raise ApiException(http_resp=r)
+    kubernetes.client.rest.ApiException: (429)
+    Reason: Too Many Requests
+    HTTP response headers: HTTPHeaderDict({'Audit-Id': '2cc45715-7c14-4a3b-b9a9-e58c16d613d4', 'Content-Type': 'application/json', 'Date': 'Wed, 18 Jul 2018 15:25:28 GMT', 'Content-Length': '324'})
+    HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Cannot evict pod as it would violate the pod's disruption budget.","reason":"TooManyRequests","details":{"causes":[{"reason":"DisruptionBudget","message":"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently"}]},"code":429}
+    
+    
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/node/actions.py", line 306, in drain_nodes
+        pod.metadata.name, x.body))
+    chaoslib.exceptions.FailedActivity: Failed to evict pod my-service-6dc649f897-7m72z: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Cannot evict pod as it would violate the pod's disruption budget.","reason":"TooManyRequests","details":{"causes":[{"reason":"DisruptionBudget","message":"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently"}]},"code":429}
+    
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/russellmiles/.venvs/pdbdemo/lib/python3.6/site-packages/chaosk8s/node/actions.py", line 306, in drain_nodes
+        pod.metadata.name, x.body))
+    chaoslib.exceptions.FailedActivity: chaoslib.exceptions.FailedActivity: Failed to evict pod my-service-6dc649f897-7m72z: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Cannot evict pod as it would violate the pod's disruption budget.","reason":"TooManyRequests","details":{"causes":[{"reason":"DisruptionBudget","message":"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently"}]},"code":429}
+[31m[2018-07-18 16:25:29 ERROR][39m   => failed: chaoslib.exceptions.FailedActivity: Failed to evict pod my-service-6dc649f897-7m72z: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"Cannot evict pod as it would violate the pod's disruption budget.","reason":"TooManyRequests","details":{"causes":[{"reason":"DisruptionBudget","message":"The disruption budget my-app-pdb needs 3 healthy pods and has 3 currently"}]},"code":429}
+[32m[2018-07-18 16:25:29 INFO][39m Steady state hypothesis: Services are all available and healthy
+[32m[2018-07-18 16:25:29 INFO][39m Probe: application-must-respond-normally
+[36m[2018-07-18 16:25:29 DEBUG][39m   => succeeded with '{'status': 200, 'headers': {'Server': 'BigIP', 'Connection': 'Keep-Alive', 'Content-Length': '73'}, 'body': '<html><head><title>dns error</title></head><body>DNS Error</body></html>\n'}'
+[36m[2018-07-18 16:25:29 DEBUG][39m allowed tolerance is 200
+[32m[2018-07-18 16:25:29 INFO][39m Probe: pods_in_phase
+[36m[2018-07-18 16:25:29 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:25:29 DEBUG][39m Found 3 pods matching label 'biz-app-id=retail'
+[36m[2018-07-18 16:25:29 DEBUG][39m   => succeeded with 'True'
+[36m[2018-07-18 16:25:29 DEBUG][39m allowed tolerance is True
+[32m[2018-07-18 16:25:29 INFO][39m Steady state hypothesis is met!
+[32m[2018-07-18 16:25:29 INFO][39m Let's rollback...
+[32m[2018-07-18 16:25:29 INFO][39m Rollback: uncordon_node
+[32m[2018-07-18 16:25:29 INFO][39m Action: uncordon_node
+[36m[2018-07-18 16:25:29 DEBUG][39m Using Kubernetes context: default
+[36m[2018-07-18 16:25:29 DEBUG][39m Found 1 node named 'gke-disruption-demo-default-pool-9fa7a856-jrvm'
+[36m[2018-07-18 16:25:29 DEBUG][39m Found 1 nodes labelled 'None'
+[36m[2018-07-18 16:25:29 DEBUG][39m   => succeeded without any result value
+[32m[2018-07-18 16:25:29 INFO][39m Experiment ended with status: completed
+[36m[2018-07-18 16:25:29 DEBUG][39m Clearing activities cache
+[36m[2018-07-18 16:25:29 DEBUG][39m could not find Python plugin 'chaosslack.notification' for notification
+[36m[2018-07-18 15:47:22 DEBUG][39m ###############################################################################
+[36m[2018-07-18 15:47:22 DEBUG][39m Running command 'report'
